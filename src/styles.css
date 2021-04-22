@@ -1,1 +1,356 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Eurostile";
+    src: url("assets/fonts/Eurostile.ttf")
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("assets/fonts/Exo2.ttf")
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #video-bg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #video-bg {
+        width: auto;
+        height: 100%;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.row {
+    align-items: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn {
+    background-color: rgb(10, 175, 241);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 10px!important;
+    line-height: 1.42857143;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-family: Brutal_Regular, "Open Sans", arial;
+    max-width: 450px;
+    padding: 15px 35px;
+    margin: 5px;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.btn:hover {
+    background-color: rgb(9, 157, 217);
+}
+
+body {
+    background: white;
+    background-attachment: fixed;
+    font-family: "Exo 2", Helvetica, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #2a2a2a;
+    text-transform: uppercase;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    position: static!important;
+    line-height: 1.42857143;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+
+header ul {
+    display: block;
+    height: inherit;
+    margin: 0px auto 0px;
+    float: left;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+@media screen and (max-width:850px){
+    .logo{
+        display: none;
+    }
+    header{
+        align-items: center;
+    }
+    ul{
+        align-items: center;
+    }
+}
+
+
+header a {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    transition: all 300ms;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    color: rgb(240, 140, 0);
+}
+
+header .actived {
+    background: rgba(0, 0, 0, 0.9);
+    color: rgb(240, 140, 0);
+}
+
+.logo {
+    float: left;
+}
+
+.logo a:hover {
+    background: transparent;
+}
+
+.brand {
+    font-family: "Eurostile", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.ue4font {
+    font-family: "Eurostile", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #2a2a2a;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: lightgray;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+}
+
+.footer .footer-top {
+    padding-top: 20px;
+    height: 70px;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
+.footer .footer-top a {
+    transition: all 300ms;
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-content {
+    height: 20px;
+}
+
+.footer .footer-bottom {
+    display: block;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 10px!important;
+}
+
+.social-icon:hover {
+    color: rgb(240, 140, 0);
+}
+
+.home-container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.fullscreen-video-wrap {
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20;
+    left: 0;
+    background: #2a2a2a;
+    z-index: 1;
+    opacity: 0.70;
+}
+
+.home-content {
+    margin: 40px;
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.home-service-img {
+    width: 100px;
+    height: 100px;
+}
+
+.title-border>span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.title-border>span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.title-border span {
+    color: rgb(69, 69, 69);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.title-border span {
+    color: rgb(51, 51, 51);
+}
+
+.title-border>span, .title-border>a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.title-border>span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.title-border span {
+    color: #454545;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.title-border span {
+    color: #333;
+}
+
+.title-border .line {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(240, 140, 0);
+    z-index: 9999;
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 0px;
+    right: 0px;
+    display: block;
+}
+
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    background-color: peachpuff
+}
+

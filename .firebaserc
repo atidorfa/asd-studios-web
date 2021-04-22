@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "asd-studios": {
+      "hosting": {
+        "px": [
+          "asd-studios"
+        ]
+      }
+    }
+  }
+}
