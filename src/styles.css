@@ -271,6 +271,7 @@ h2 {
 #section6-landing .icon-box {
 	border: 2px solid #F6F4F5;
 	background: #F6F4F5;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 10px;
 	padding: 80px 20px 40px 20px;
 	border-radius: 10px;
